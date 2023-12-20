@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import RouteFinder from './components/RouteFinder';
-import MainPage from '/Users/rohan/Desktop/transporter/src/components/MainPage.js';
+import MainPage from './components/MainPage.js';
 import NavBar from './components/Navbar';
 import SearchHistory from './components/SearchHistory';
 

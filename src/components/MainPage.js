@@ -8,7 +8,7 @@ function MainPage(){
             <h3 id='h3'>About</h3>
             <p>This webpage is meant to show users without their own transportation the best way to get to where they want to go. The website will leverage public transit systems  to find the optimal transport based on time. This is a developing site. Eventually the plan is to include more transportation systems (Uber, Lyft, etc). Credits to Google's API for making this</p>
             <p><b>Warning: </b>Since this site is still developing, you will need to manually enter the complete address - address, city, state, zip code</p>
-            <p><b>Click Route Finder in the menu to start your search</b></p>
+            <p><b>Click on Route Finder in the menu to start your search</b></p>
             <a href="https://developers.google.com/maps/documentation/directions" target = "_blank">
                 <button id="mapsbutton">Google Directions API info</button>
             </a>
