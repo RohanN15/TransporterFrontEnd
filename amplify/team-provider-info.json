@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-transporter-dev-24303-authRole",
+      "UnauthRoleArn": "arn:aws:iam::932776689779:role/amplify-transporter-dev-24303-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::932776689779:role/amplify-transporter-dev-24303-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-transporter-dev-24303-deployment",
+      "UnauthRoleName": "amplify-transporter-dev-24303-unauthRole",
+      "StackName": "amplify-transporter-dev-24303",
+      "StackId": "arn:aws:cloudformation:us-east-1:932776689779:stack/amplify-transporter-dev-24303/e871c3d0-a166-11ee-826c-0a66ceab538d",
+      "AmplifyAppId": "d29pfyzrhipbeu"
+    },
+    "categories": {
+      "function": {
+        "transporterd97df229": {}
+      }
+    }
+  }
+}

@@ -37,29 +37,35 @@ body{
     margin-left:30px;
     margin-right: 30px;
 }
-/* #amtrak{
-    margin-left:30px;
+#amtrak{
+    margin-left:200px;
     margin-right: 30px;
-} */
-#flightaware{
-    margin-left:30px;
+    width: 250px;
+}
+#metro{
+    margin-left:200px;
     margin-right: 30px;
 }
-/* #metro{
-    margin-left:30px;
-    margin-right: 30px;
-} */
-#transport-logos {
+#walker{
+    margin-left: 150px;
+    width:200px;
+    height: 135px;
+}
+#cycle{
+    width:200px;
+    height:145px;
+    margin-left: 15px;
+}
+/* #transport-logos {
     text-align: center;
     margin: 0 auto;
-    display: block /* This centers the inline-block children */
+    display: block 
 }
 
 #amtrak, #metro {
-    display: inline-block; /* Make them inline-block to allow centering */
-    width: 10%; /* Set a width */
-    /* Remove margin-left and margin-right if you want them next to each other */
-}
+    display: inline-block; 
+    width: 10%; 
+} */
 #mapsbutton{
     background-color: black; /* Green */
     border: none;

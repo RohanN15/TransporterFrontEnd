@@ -6,36 +6,7 @@ function RouteFinder() {
     const [start, setStart] = useState('');
     const [destination, setDestination] = useState('')
     const [route, setRoute] = useState([]);
-    // const handleEnter = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const response = await fetch('http://127.0.0.1:8000/getRoute/add_eta', {
-    //             method: 'POST',
-    //             headers: {
-    //               'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify({
-    //                 start: start,
-    //                 destination: destination,
-    //             }), 
-    //         });
-    //         if (response.ok) {
-    //             console.log('Review submitted successfully');
-    //             // Fetch the updated ETAs here
-    //             fetch('http://127.0.0.1:8000/getRoute/etas')
-    //             .then((res) => res.json())
-    //             .then((res) => {
-    //                 setRoute(res['eta']);
-    //                 console.log('Updated ETAs fetched successfully');
-    //             });
-    //         } else {
-    //             console.error('Failed to submit review');
-    //         }
-    //     } catch (error) {
-    //         console.error('Error submitting review:', error);
-    //     }
-    // };
-    const handleEnter = (e) => {
+    const handleTransit = (e) => {
         e.preventDefault();
         fetch('http://127.0.0.1:8000/getRoute/add_eta', {
             method: 'POST',
@@ -65,7 +36,66 @@ function RouteFinder() {
             console.error('Error:', error);
         });
     };
-    
+    const handleWalk = (e) => {
+        e.preventDefault();
+        fetch('http://127.0.0.1:8000/getRoute/add_walk', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                start: start,
+                end: destination,
+            }), 
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Review submitted successfully');
+                return fetch('http://127.0.0.1:8000/getRoute/etas');
+            } else {
+                console.error('Failed to submit review');
+                throw new Error('Failed to submit review');
+            }
+        })
+        .then(res => res.json())
+        .then(res => {
+            setRoute(res['eta']);
+            console.log('Updated ETAs fetched successfully');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    };
+    const handleBike = (e) => {
+        e.preventDefault();
+        fetch('http://127.0.0.1:8000/getRoute/add_bike', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                start: start,
+                end: destination,
+            }), 
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Review submitted successfully');
+                return fetch('http://127.0.0.1:8000/getRoute/etas');
+            } else {
+                console.error('Failed to submit review');
+                throw new Error('Failed to submit review');
+            }
+        })
+        .then(res => res.json())
+        .then(res => {
+            setRoute(res['eta']);
+            console.log('Updated ETAs fetched successfully');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    };
     
     useEffect(() => {
         fetch('http://127.0.0.1:8000/getRoute/etas')
@@ -93,7 +123,12 @@ function RouteFinder() {
                 />
             </div>
             <br/>
-            <button id="enter" onClick={handleEnter}>Enter</button>
+            <div class = "buttons">
+                <button id="transit" onClick={handleTransit}>Transit</button>
+                <button id="walk" onClick={handleWalk}>Walk</button>
+                <button id="bike" onClick={handleBike}>Bicycle</button>
+
+            </div>
             <br/>
             <br/>
             <div id="routeDisplay">
