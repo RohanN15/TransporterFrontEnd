@@ -42,52 +42,30 @@ body{
 .input-container label,
 .input-container input {
     margin: 5px;
-    width: 40%; /* Adjust width as needed */
+    width: 40%; 
 }
 
-/* #transit {
-    background-color: #4CAF50; 
-    border: none;
-    color: black;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    margin:0 auto;
-    display: block;
-  }
-  #walk {
-    background-color: #4CAF50; 
-    border: none;
-    color: black;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    margin:0 auto;
-    display: block;
-  } */
   .buttons {
-    display: flex;       /* Enable Flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+    display: flex;       
+    justify-content: center; 
+    align-items: center;     
   }
   
   #transit, #walk, #bike {
-    background-color: black; /* Green */
+    background-color: black; 
     border: none;
     color: white;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block; /* This will allow them to sit side by side */
+    display: inline-block; 
     font-size: 16px;
     cursor: pointer;
-    margin: 10px 2px; /* This adds space between the buttons */
+    margin: 10px 2px; 
+  }
+  #transit:hover, #walk:hover, #bike:hover {
+    background-color: white;
+    color: black;
   }
   
   
